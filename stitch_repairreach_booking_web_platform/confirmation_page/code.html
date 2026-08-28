@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Booking Confirmation - RepairReach</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                            "on-primary": "#ffffff",
+                            "on-secondary-fixed": "#00201c",
+                            "surface-container": "#e6eeff",
+                            "surface": "#f8f9ff",
+                            "surface-container-highest": "#d5e3fc",
+                            "on-secondary": "#ffffff",
+                            "primary-fixed": "#b9eaff",
+                            "primary-container": "#0e7490",
+                            "tertiary-fixed": "#dbe4ea",
+                            "primary": "#005a71",
+                            "inverse-on-surface": "#eaf1ff",
+                            "on-surface": "#0d1c2e",
+                            "background": "#f8f9ff",
+                            "inverse-surface": "#233144",
+                            "surface-variant": "#d5e3fc",
+                            "tertiary-container": "#636c71",
+                            "tertiary": "#4b5459",
+                            "on-primary-container": "#d3f1ff",
+                            "secondary-fixed": "#62fae3",
+                            "secondary": "#006b5f",
+                            "inverse-primary": "#81d1f0",
+                            "secondary-container": "#62fae3",
+                            "on-error-container": "#93000a",
+                            "on-background": "#0d1c2e",
+                            "on-tertiary-fixed-variant": "#3f484d",
+                            "surface-bright": "#f8f9ff",
+                            "on-surface-variant": "#3f484c",
+                            "secondary-fixed-dim": "#3cddc7",
+                            "outline-variant": "#bec8cd",
+                            "surface-container-lowest": "#ffffff",
+                            "error-container": "#ffdad6",
+                            "on-primary-fixed": "#001f29",
+                            "outline": "#6f787d",
+                            "surface-container-low": "#eff4ff",
+                            "tertiary-fixed-dim": "#bfc8ce",
+                            "on-secondary-container": "#007165",
+                            "on-tertiary": "#ffffff",
+                            "surface-dim": "#ccdbf3",
+                            "on-error": "#ffffff",
+                            "on-secondary-fixed-variant": "#005047",
+                            "error": "#ba1a1a",
+                            "on-tertiary-fixed": "#141d21",
+                            "surface-container-high": "#dce9ff",
+                            "on-tertiary-container": "#e5eef4",
+                            "primary-fixed-dim": "#81d1f0",
+                            "surface-tint": "#006781",
+                            "on-primary-fixed-variant": "#004d62"
+                    },
+                    "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                    },
+                    "spacing": {
+                            "md": "24px",
+                            "xs": "4px",
+                            "gutter": "16px",
+                            "xl": "64px",
+                            "margin-mobile": "20px",
+                            "lg": "40px",
+                            "max-width": "1200px",
+                            "base": "8px",
+                            "sm": "12px",
+                            "margin-desktop": "auto"
+                    },
+                    "fontFamily": {
+                            "h1": [
+                                    "Manrope"
+                            ],
+                            "label-md": [
+                                    "Manrope"
+                            ],
+                            "body-lg": [
+                                    "Manrope"
+                            ],
+                            "h3": [
+                                    "Manrope"
+                            ],
+                            "body-md": [
+                                    "Manrope"
+                            ],
+                            "h2": [
+                                    "Manrope"
+                            ],
+                            "button": [
+                                    "Manrope"
+                            ]
+                    },
+                    "fontSize": {
+                            "h1": [
+                                    "40px",
+                                    {
+                                            "lineHeight": "1.2",
+                                            "letterSpacing": "-0.02em",
+                                            "fontWeight": "800"
+                                    }
+                            ],
+                            "label-md": [
+                                    "14px",
+                                    {
+                                            "lineHeight": "1.2",
+                                            "letterSpacing": "0.01em",
+                                            "fontWeight": "600"
+                                    }
+                            ],
+                            "body-lg": [
+                                    "18px",
+                                    {
+                                            "lineHeight": "1.6",
+                                            "fontWeight": "400"
+                                    }
+                            ],
+                            "h3": [
+                                    "24px",
+                                    {
+                                            "lineHeight": "1.3",
+                                            "fontWeight": "700"
+                                    }
+                            ],
+                            "body-md": [
+                                    "16px",
+                                    {
+                                            "lineHeight": "1.5",
+                                            "fontWeight": "400"
+                                    }
+                            ],
+                            "h2": [
+                                    "32px",
+                                    {
+                                            "lineHeight": "1.25",
+                                            "letterSpacing": "-0.01em",
+                                            "fontWeight": "700"
+                                    }
+                            ],
+                            "button": [
+                                    "16px",
+                                    {
+                                            "lineHeight": "1",
+                                            "fontWeight": "600"
+                                    }
+                            ]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background min-h-screen flex flex-col font-body-md text-on-background antialiased">
+<!-- Suppressed TopAppBar for Transactional/Success Screen -->
+<main class="flex-grow flex items-center justify-center p-margin-mobile md:p-lg">
+<div class="w-full max-w-2xl bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_-4px_rgba(14,116,144,0.08)] p-md md:p-lg border border-surface-container-high relative overflow-hidden">
+<!-- Decorative Header Accent -->
+<div class="absolute top-0 left-0 w-full h-2 bg-primary-container"></div>
+<div class="flex flex-col items-center text-center mb-xl pt-sm">
+<div class="w-20 h-20 bg-[#F0F9FF] rounded-full flex items-center justify-center mb-md text-primary-container">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<h1 class="font-h1 text-h1 text-on-background mb-xs">Booking Confirmed</h1>
+<p class="font-body-lg text-body-lg text-outline">Your repair request has been successfully scheduled.</p>
+</div>
+<div class="bg-surface rounded-lg p-md mb-xl border border-surface-container shadow-sm">
+<h2 class="font-h3 text-h3 text-on-background mb-md border-b border-surface-container-high pb-sm">Booking Summary</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="flex flex-col gap-xs">
+<span class="font-label-md text-label-md text-outline">Customer</span>
+<span class="font-body-md text-body-md text-on-background font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-sm">person</span>
+                            Sarah Jenkins
+                        </span>
+</div>
+<div class="flex flex-col gap-xs">
+<span class="font-label-md text-label-md text-outline">Service</span>
+<span class="font-body-md text-body-md text-on-background font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-sm">plumbing</span>
+                            Plumbing Repair
+                        </span>
+</div>
+<div class="flex flex-col gap-xs">
+<span class="font-label-md text-label-md text-outline">Date &amp; Time</span>
+<span class="font-body-md text-body-md text-on-background font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-sm">event</span>
+                            Oct 24, 2024 • 10:00 AM
+                        </span>
+</div>
+<div class="flex flex-col gap-xs">
+<span class="font-label-md text-label-md text-outline">Location</span>
+<span class="font-body-md text-body-md text-on-background font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-sm">location_on</span>
+                            123 Maple Street, Apt 4B
+                        </span>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-md justify-center items-center">
+<button class="w-full md:w-auto h-[56px] px-xl bg-primary-container text-on-primary font-button text-button rounded-lg shadow-md hover:shadow-lg hover:bg-primary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-container focus:ring-offset-2">
+                    Return to Home
+                </button>
+<button class="w-full md:w-auto h-[56px] px-lg border-2 border-[#E2E8F0] text-primary-container bg-surface-container-lowest font-button text-button rounded-lg hover:bg-[#F0F9FF] hover:border-primary-container transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-container focus:ring-offset-2 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">support_agent</span>
+                    Contact Us
+                </button>
+</div>
+</div>
+</main>
+<!-- Suppressed Footer for Transactional/Success Screen -->
+</body></html>

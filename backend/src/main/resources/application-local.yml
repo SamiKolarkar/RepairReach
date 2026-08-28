@@ -1,0 +1,14 @@
+# Local development profile — imports credentials from root .env file
+spring:
+  config:
+    import: optional:file:../.env[.properties]
+
+  flyway:
+    baseline-on-migrate: true
+    default-schema: repairreach
+    schemas: repairreach
+
+  jpa:
+    properties:
+      hibernate:
+        default_schema: repairreach

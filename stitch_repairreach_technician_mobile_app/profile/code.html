@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#374763",
+                        "on-primary-fixed-variant": "#0040a2",
+                        "surface": "#faf8ff",
+                        "tertiary": "#7b2600",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#0c56d0",
+                        "secondary": "#4f5f7b",
+                        "tertiary-fixed-dim": "#ffb59b",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e1e2ec",
+                        "on-tertiary-fixed-variant": "#812800",
+                        "surface-container-high": "#e7e7f2",
+                        "surface-container-highest": "#e1e2ec",
+                        "secondary-fixed-dim": "#b7c7e8",
+                        "tertiary-container": "#a33500",
+                        "surface-container-low": "#f3f3fd",
+                        "outline-variant": "#c3c6d6",
+                        "surface-bright": "#faf8ff",
+                        "inverse-primary": "#b2c5ff",
+                        "surface-dim": "#d9d9e4",
+                        "on-background": "#191b23",
+                        "on-surface-variant": "#434654",
+                        "on-surface": "#191b23",
+                        "surface-container": "#ededf8",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#0052cc",
+                        "secondary-container": "#cdddff",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#ffdbcf",
+                        "inverse-surface": "#2e3038",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "on-tertiary-fixed": "#380d00",
+                        "primary": "#003d9b",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#d6e3ff",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f0f0fb",
+                        "on-primary-container": "#c4d2ff",
+                        "on-tertiary-container": "#ffc6b2",
+                        "primary-fixed": "#dae2ff",
+                        "on-primary-fixed": "#001848",
+                        "on-primary": "#ffffff",
+                        "background": "#faf8ff",
+                        "on-secondary-container": "#51617e",
+                        "outline": "#737685",
+                        "on-secondary-fixed": "#091c35"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "touch-target-min": "48px",
+                        "unit": "4px",
+                        "stack-sm": "8px",
+                        "gutter": "12px",
+                        "margin-edge": "16px",
+                        "stack-md": "16px",
+                        "stack-lg": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+        .tap-highlight-transparent { -webkit-tap-highlight-color: transparent; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body-lg text-on-surface min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 shadow-sm fixed top-0 z-50 flex justify-between items-center w-full px-4 h-16">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-slate-200">
+<img alt="Technician Profile Photo" class="w-full h-full object-cover" data-alt="Professional headshot of a friendly male technician in a clean blue uniform smiling confidently at the camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcDKlEtfF1Y24iRzl1kaJsO--fgbHYV8V-JuPmaiwcXH7hPdJ_qNOyUGsVGcQg3TRUVpV3mUn1ndGMhn5qGrS4CdY5y2QLr9LsB6pGhrSwW4SRe2A7o_kwRDC5WVQqDukQHihZuWQ7annGdGVLy1fuIEkD2BInDOPJnA35MFcpdFQhlDzPQH8lKd2KNyhj4-7pjrnL7-ayeu3oAk22GkkErRwUe1HNJTVMLdaaaYw94TdtZP7o-7YL14YtyosJEPfVbtPX_gzVcsE"/>
+</div>
+<span class="text-xl font-bold tracking-tight text-blue-700 dark:text-blue-500 font-headline-md">RepairReach</span>
+</div>
+<button class="w-12 h-12 flex items-center justify-center rounded-full hover:bg-slate-50 dark:hover:bg-slate-800 active:scale-95 transition-all duration-200">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400" data-icon="notifications">notifications</span>
+</button>
+</header>
+<main class="pt-20 pb-28 px-margin-edge max-w-md mx-auto space-y-stack-lg">
+<!-- Technician Info Card -->
+<section class="bg-surface-container-lowest rounded-xl p-stack-md shadow-sm border border-outline-variant/20">
+<div class="flex items-center gap-stack-md">
+<div class="w-20 h-20 rounded-xl overflow-hidden shadow-sm">
+<img alt="Alex Smith" class="w-full h-full object-cover" data-alt="Close-up portrait of Alex Smith, a professional technician with a neat appearance and a blue work shirt" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcp-YBIWVd1XRyYLyGTg9rU-tNcfsb8ZUFY7Q1w8gpGNlnDSOQIqfc-qSH7PGNe6u8YnZiw818DnCG_WabeHybqOtBRDDvTHEoAMLIBBVUddMoZRzHmknabBfPfBHVWMdUquPdse3MDZKl5yGUGyyp0bmYlD3RFXrDQPHd_VeAdWrlvH2VY0Putw852iUbF5N_NqFEmEPMfAzK48MPmUrJvmK1Y1nZXGoI6gC1GMWndMQSp2jLK-6k223Pkdo5pOlfs3Jak3TKVyM"/>
+</div>
+<div class="flex-1">
+<h1 class="font-headline-md text-headline-md text-on-surface">Alex Smith</h1>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-amber-500 text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">4.9 stars (124 reviews)</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary flex items-center gap-1 mt-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="call">call</span>
+                        (555) 123-4567
+                    </p>
+</div>
+</div>
+</section>
+<!-- Availability Summary Section (Asymmetric / Modern Bento style) -->
+<section class="space-y-stack-sm">
+<h2 class="font-label-caps text-label-caps text-secondary px-1">Availability Summary</h2>
+<div class="grid grid-cols-2 gap-stack-sm">
+<div class="col-span-2 bg-primary-container rounded-xl p-stack-md text-on-primary-container shadow-sm">
+<div class="flex justify-between items-start">
+<div>
+<p class="font-label-caps text-label-caps opacity-80">Next Shift</p>
+<p class="font-headline-md text-headline-md mt-1">Tomorrow, 08:00 AM</p>
+</div>
+<span class="material-symbols-outlined text-3xl" data-icon="event_available">event_available</span>
+</div>
+<div class="mt-4 pt-4 border-t border-white/10 flex justify-between items-center">
+<span class="font-body-sm text-body-sm">8 Jobs Scheduled</span>
+<button class="bg-white/20 px-3 py-1.5 rounded-lg text-sm font-semibold active:scale-95 transition-all">Adjust</button>
+</div>
+</div>
+<div class="bg-surface-container rounded-xl p-stack-md border border-outline-variant/30">
+<p class="font-label-caps text-label-caps text-on-secondary-container">Weekly Hours</p>
+<p class="font-headline-md text-headline-md text-primary mt-1">38.5h</p>
+</div>
+<div class="bg-surface-container rounded-xl p-stack-md border border-outline-variant/30">
+<p class="font-label-caps text-label-caps text-on-secondary-container">Status</p>
+<div class="flex items-center gap-1.5 mt-2">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+<span class="font-headline-md text-headline-md text-on-surface">Online</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Settings links -->
+<section class="space-y-stack-sm">
+<h2 class="font-label-caps text-label-caps text-secondary px-1">Account Settings</h2>
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/20 shadow-sm">
+<a class="flex items-center justify-between p-stack-md hover:bg-slate-50 active:bg-slate-100 transition-colors" href="#">
+<div class="flex items-center gap-stack-md">
+<div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</div>
+<span class="font-body-lg text-body-lg">Notification Preferences</span>
+</div>
+<span class="material-symbols-outlined text-outline" data-icon="chevron_right">chevron_right</span>
+</a>
+<div class="h-px bg-outline-variant/30 mx-stack-md"></div>
+<a class="flex items-center justify-between p-stack-md hover:bg-slate-50 active:bg-slate-100 transition-colors" href="#">
+<div class="flex items-center gap-stack-md">
+<div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-slate-600">
+<span class="material-symbols-outlined" data-icon="security">security</span>
+</div>
+<span class="font-body-lg text-body-lg">Account Security</span>
+</div>
+<span class="material-symbols-outlined text-outline" data-icon="chevron_right">chevron_right</span>
+</a>
+<div class="h-px bg-outline-variant/30 mx-stack-md"></div>
+<a class="flex items-center justify-between p-stack-md hover:bg-slate-50 active:bg-slate-100 transition-colors" href="#">
+<div class="flex items-center gap-stack-md">
+<div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-slate-600">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</div>
+<span class="font-body-lg text-body-lg">Help &amp; Support</span>
+</div>
+<span class="material-symbols-outlined text-outline" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</section>
+<!-- Logout button -->
+<button class="w-full bg-white border border-error/20 text-error font-semibold py-4 rounded-xl flex items-center justify-center gap-2 shadow-sm active:scale-[0.98] transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+            Logout
+        </button>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-2 py-3 bg-white dark:bg-slate-900 pb-safe z-50 border-t border-slate-100 dark:border-slate-800 shadow-[0_-1px_3px_0_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-4 py-1.5 hover:text-blue-600 transition-opacity active:opacity-70" href="#">
+<span class="material-symbols-outlined" data-icon="home_repair_service">home_repair_service</span>
+<span class="font-['Inter'] text-[11px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-4 py-1.5 hover:text-blue-600 transition-opacity active:opacity-70" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span class="font-['Inter'] text-[11px] font-medium">Schedule</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-4 py-1.5 hover:text-blue-600 transition-opacity active:opacity-70" href="#">
+<span class="material-symbols-outlined" data-icon="event_available">event_available</span>
+<span class="font-['Inter'] text-[11px] font-medium">Availability</span>
+</a>
+<a class="flex flex-col items-center justify-center text-blue-700 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 rounded-2xl px-4 py-1.5 transition-opacity active:opacity-70" href="#">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-['Inter'] text-[11px] font-medium">Profile</span>
+</a>
+</nav>
+</body></html>

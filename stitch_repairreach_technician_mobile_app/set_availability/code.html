@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#374763",
+                    "on-primary-fixed-variant": "#0040a2",
+                    "surface": "#faf8ff",
+                    "tertiary": "#7b2600",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#0c56d0",
+                    "secondary": "#4f5f7b",
+                    "tertiary-fixed-dim": "#ffb59b",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#e1e2ec",
+                    "on-tertiary-fixed-variant": "#812800",
+                    "surface-container-high": "#e7e7f2",
+                    "surface-container-highest": "#e1e2ec",
+                    "secondary-fixed-dim": "#b7c7e8",
+                    "tertiary-container": "#a33500",
+                    "surface-container-low": "#f3f3fd",
+                    "outline-variant": "#c3c6d6",
+                    "surface-bright": "#faf8ff",
+                    "inverse-primary": "#b2c5ff",
+                    "surface-dim": "#d9d9e4",
+                    "on-background": "#191b23",
+                    "on-surface-variant": "#434654",
+                    "on-surface": "#191b23",
+                    "surface-container": "#ededf8",
+                    "error-container": "#ffdad6",
+                    "primary-container": "#0052cc",
+                    "secondary-container": "#cdddff",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed": "#ffdbcf",
+                    "inverse-surface": "#2e3038",
+                    "primary-fixed-dim": "#b2c5ff",
+                    "on-tertiary-fixed": "#380d00",
+                    "primary": "#003d9b",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "secondary-fixed": "#d6e3ff",
+                    "on-secondary": "#ffffff",
+                    "inverse-on-surface": "#f0f0fb",
+                    "on-primary-container": "#c4d2ff",
+                    "on-tertiary-container": "#ffc6b2",
+                    "primary-fixed": "#dae2ff",
+                    "on-primary-fixed": "#001848",
+                    "on-primary": "#ffffff",
+                    "background": "#faf8ff",
+                    "on-secondary-container": "#51617e",
+                    "outline": "#737685",
+                    "on-secondary-fixed": "#091c35"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "touch-target-min": "48px",
+                    "unit": "4px",
+                    "stack-sm": "8px",
+                    "gutter": "12px",
+                    "margin-edge": "16px",
+                    "stack-md": "16px",
+                    "stack-lg": "24px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-caps": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .pb-safe {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-lg min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-white dark:bg-slate-900 shadow-sm border-b border-slate-100 dark:border-slate-800 flex justify-between items-center w-full px-4 h-16 fixed top-0 z-50">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-high">
+<img alt="Technician Profile Photo" class="w-full h-full object-cover" data-alt="professional portrait of a service technician wearing a blue polo shirt in a bright modern office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzD3ud65i8PWmOPFTkW1or3AXsTMivZ9jq89j30D4LI-v5YCDumQiNDMOGvw5UsnPgESJTIx7yxTSMHC2jd5GQZTDRLxxE0xsJ2TJnndC2a_42lFkXyuKPESY4QyPgZ3lo7PV81SH7rnj278wPVPYac9fT8axJ5eGUverGDkUsZixQlRK-55Q8pB9VqNeRAuDIz34A56U2UjYiwU3DsELrdVSe1NRbCr1BUkBpuf_RQAHEr48vKjr2ixn9gKl3W9FgBwBagIVVO6o"/>
+</div>
+<span class="text-xl font-bold tracking-tight text-blue-700 dark:text-blue-500 font-headline-md">RepairReach</span>
+</div>
+<button class="w-touch-target-min h-touch-target-min flex items-center justify-center text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 active:scale-95 transition-all duration-200 rounded-full">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</header>
+<main class="flex-1 mt-16 mb-24 px-margin-edge">
+<!-- Date Selector Section -->
+<section class="py-stack-lg">
+<div class="flex items-center justify-between mb-stack-md">
+<h1 class="font-headline-md text-headline-md text-on-surface">Manage Availability</h1>
+<button class="flex items-center gap-1 text-primary font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-[18px]" data-icon="calendar_month">calendar_month</span>
+                    October 2023
+                </button>
+</div>
+<div class="flex gap-3 overflow-x-auto hide-scrollbar -mx-margin-edge px-margin-edge pb-unit">
+<!-- Date Cards -->
+<button class="flex-shrink-0 w-16 h-20 rounded-xl bg-primary-container text-on-primary-container flex flex-col items-center justify-center shadow-sm active:scale-95 transition-transform">
+<span class="font-label-caps text-label-caps opacity-80">MON</span>
+<span class="font-display-lg text-headline-md mt-1">23</span>
+</button>
+<button class="flex-shrink-0 w-16 h-20 rounded-xl bg-white border border-outline-variant flex flex-col items-center justify-center hover:bg-surface-container-low active:scale-95 transition-transform">
+<span class="font-label-caps text-label-caps text-on-surface-variant">TUE</span>
+<span class="font-display-lg text-headline-md text-on-surface mt-1">24</span>
+</button>
+<button class="flex-shrink-0 w-16 h-20 rounded-xl bg-white border border-outline-variant flex flex-col items-center justify-center hover:bg-surface-container-low active:scale-95 transition-transform">
+<span class="font-label-caps text-label-caps text-on-surface-variant">WED</span>
+<span class="font-display-lg text-headline-md text-on-surface mt-1">25</span>
+</button>
+<button class="flex-shrink-0 w-16 h-20 rounded-xl bg-white border border-outline-variant flex flex-col items-center justify-center hover:bg-surface-container-low active:scale-95 transition-transform">
+<span class="font-label-caps text-label-caps text-on-surface-variant">THU</span>
+<span class="font-display-lg text-headline-md text-on-surface mt-1">26</span>
+</button>
+<button class="flex-shrink-0 w-16 h-20 rounded-xl bg-white border border-outline-variant flex flex-col items-center justify-center hover:bg-surface-container-low active:scale-95 transition-transform">
+<span class="font-label-caps text-label-caps text-on-surface-variant">FRI</span>
+<span class="font-display-lg text-headline-md text-on-surface mt-1">27</span>
+</button>
+<button class="flex-shrink-0 w-16 h-20 rounded-xl bg-white border border-outline-variant flex flex-col items-center justify-center hover:bg-surface-container-low active:scale-95 transition-transform">
+<span class="font-label-caps text-label-caps text-on-surface-variant">SAT</span>
+<span class="font-display-lg text-headline-md text-on-surface mt-1">28</span>
+</button>
+</div>
+</section>
+<!-- Global Action Card -->
+<section class="mb-stack-lg">
+<div class="bg-surface-container-highest rounded-xl p-stack-md flex items-center justify-between border border-outline-variant">
+<div class="flex items-center gap-stack-md">
+<div class="w-10 h-10 rounded-full bg-error-container flex items-center justify-center text-on-error-container">
+<span class="material-symbols-outlined" data-icon="block">block</span>
+</div>
+<div>
+<p class="font-headline-md text-body-lg leading-tight">Block Full Day</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Set entire day as unavailable</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-error"></div>
+</label>
+</div>
+</section>
+<!-- Time Slots Grid (Bento Style) -->
+<section>
+<h2 class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mb-stack-md">Availability Slots</h2>
+<div class="grid grid-cols-1 gap-stack-md">
+<!-- Slot Item -->
+<div class="bg-white rounded-xl border border-outline-variant p-stack-md flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-primary" data-icon="wb_sunny">wb_sunny</span>
+<div>
+<p class="font-headline-md text-body-lg">09:00 AM - 11:00 AM</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Morning Shift</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+<span class="text-[10px] font-bold text-primary uppercase">Available</span>
+</div>
+</div>
+<!-- Slot Item -->
+<div class="bg-white rounded-xl border border-outline-variant p-stack-md flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-primary" data-icon="light_mode">light_mode</span>
+<div>
+<p class="font-headline-md text-body-lg">11:00 AM - 01:00 PM</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Midday Shift</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+<span class="text-[10px] font-bold text-primary uppercase">Available</span>
+</div>
+</div>
+<!-- Slot Item (Unavailable) -->
+<div class="bg-surface-container-low rounded-xl border border-dashed border-outline-variant p-stack-md flex items-center justify-between">
+<div class="flex items-center gap-stack-md opacity-60">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="restaurant">restaurant</span>
+<div>
+<p class="font-headline-md text-body-lg">01:00 PM - 02:00 PM</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Lunch Break</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase">Unavailable</span>
+</div>
+</div>
+<!-- Slot Item -->
+<div class="bg-white rounded-xl border border-outline-variant p-stack-md flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-primary" data-icon="partly_cloudy_day">partly_cloudy_day</span>
+<div>
+<p class="font-headline-md text-body-lg">02:00 PM - 04:00 PM</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Afternoon Shift</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+<span class="text-[10px] font-bold text-primary uppercase">Available</span>
+</div>
+</div>
+<!-- Slot Item -->
+<div class="bg-white rounded-xl border border-outline-variant p-stack-md flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-primary" data-icon="bedtime">bedtime</span>
+<div>
+<p class="font-headline-md text-body-lg">04:00 PM - 06:00 PM</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Evening Shift</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+<span class="text-[10px] font-bold text-primary uppercase">Available</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Summary Insight Card (Asymmetric Layout Extra) -->
+<section class="mt-stack-lg mb-8">
+<div class="bg-primary text-on-primary rounded-2xl p-stack-lg flex gap-4 shadow-lg overflow-hidden relative">
+<div class="flex-1 z-10">
+<h3 class="font-headline-md text-headline-md mb-unit">Weekly Capacity</h3>
+<p class="font-body-sm text-body-sm opacity-90 mb-stack-md">You have 32 available hours remaining this week.</p>
+<button class="bg-white text-primary font-label-caps text-label-caps px-4 py-2 rounded-full font-bold">VIEW REPORT</button>
+</div>
+<div class="w-24 h-24 bg-white/10 rounded-full -absolute -bottom-8 -right-8 z-0"></div>
+<div class="w-16 h-16 bg-white/20 rounded-full -absolute top-4 -right-4 z-0"></div>
+<span class="material-symbols-outlined text-[64px] opacity-20 absolute -right-2 top-2 rotate-12" data-icon="insights">insights</span>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-2 py-3 bg-white dark:bg-slate-900 shadow-[0_-1px_3px_0_rgba(0,0,0,0.05)] border-t border-slate-100 dark:border-slate-800 z-50 pb-safe">
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-4 py-1.5 transition-opacity active:opacity-70" href="#">
+<span class="material-symbols-outlined" data-icon="home_repair_service">home_repair_service</span>
+<span class="font-['Inter'] text-[11px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-4 py-1.5 transition-opacity active:opacity-70" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span class="font-['Inter'] text-[11px] font-medium">Schedule</span>
+</a>
+<!-- Active Item: Availability -->
+<a class="flex flex-col items-center justify-center text-blue-700 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 rounded-2xl px-4 py-1.5 transition-opacity active:opacity-70" href="#">
+<span class="material-symbols-outlined" data-icon="event_available" style="font-variation-settings: 'FILL' 1;">event_available</span>
+<span class="font-['Inter'] text-[11px] font-medium">Availability</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-4 py-1.5 transition-opacity active:opacity-70" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] text-[11px] font-medium">Profile</span>
+</a>
+</nav>
+</body></html>

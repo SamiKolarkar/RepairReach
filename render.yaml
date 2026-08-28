@@ -1,0 +1,31 @@
+# DEPRECATED: This project now deploys to Railway (backend) and Vercel (frontend). See DEPLOYMENT.md
+services:
+  - type: web
+    name: repairreach-backend
+    env: java
+    plan: starter
+    region: oregon
+    buildCommand: cd backend && mvn clean package -DskipTests
+    startCommand: java -jar backend/target/repairreach-backend-0.0.1-SNAPSHOT.jar --server.port=$PORT
+    healthCheckPath: /actuator/health
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+      - key: SPRING_DATASOURCE_URL
+        sync: false
+      - key: SPRING_DATASOURCE_USERNAME
+        sync: false
+      - key: SPRING_DATASOURCE_PASSWORD
+        sync: false
+      - key: CORS_ALLOWED_ORIGINS
+        sync: false
+      - key: SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI
+        sync: false
+      - key: APP_JWT_SECRET
+        generateValue: true
+      - key: DB_POOL_MAX
+        value: "10"
+      - key: DB_POOL_MIN_IDLE
+        value: "2"
+      - key: JAVA_TOOL_OPTIONS
+        value: -Xmx384m -Xms128m -XX:+UseG1GC

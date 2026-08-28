@@ -1,0 +1,41 @@
+{
+  "name": "repairreach-e2e-tests",
+  "version": "1.0.0",
+  "description": "Opaque-box E2E test harness and test suites for RepairReach customer-facing platform",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:tier1": "vitest run tests/tier1-feature",
+    "test:tier2": "vitest run tests/tier2-boundary",
+    "test:tier3": "vitest run tests/tier3-pairwise",
+    "test:tier4": "vitest run tests/tier4-workloads",
+    "test:tier5": "vitest run tests/tier5-adversarial",
+    "test:all": "tsx src/runner.ts --all",
+    "runner": "tsx src/runner.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc"
+  },
+  "keywords": [
+    "repairreach",
+    "e2e",
+    "testing",
+    "vitest",
+    "axios"
+  ],
+  "author": "RepairReach Engineering",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@types/pg": "^8.23.1",
+    "axios": "^1.7.9",
+    "pg": "^8.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "playwright": "^1.62.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

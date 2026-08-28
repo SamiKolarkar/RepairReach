@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RepairReach - Rate Your Experience</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#00201c",
+                        "surface-container": "#e6eeff",
+                        "surface": "#f8f9ff",
+                        "surface-container-highest": "#d5e3fc",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#b9eaff",
+                        "primary-container": "#0e7490",
+                        "tertiary-fixed": "#dbe4ea",
+                        "primary": "#005a71",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-surface": "#0d1c2e",
+                        "background": "#f8f9ff",
+                        "inverse-surface": "#233144",
+                        "surface-variant": "#d5e3fc",
+                        "tertiary-container": "#636c71",
+                        "tertiary": "#4b5459",
+                        "on-primary-container": "#d3f1ff",
+                        "secondary-fixed": "#62fae3",
+                        "secondary": "#006b5f",
+                        "inverse-primary": "#81d1f0",
+                        "secondary-container": "#62fae3",
+                        "on-error-container": "#93000a",
+                        "on-background": "#0d1c2e",
+                        "on-tertiary-fixed-variant": "#3f484d",
+                        "surface-bright": "#f8f9ff",
+                        "on-surface-variant": "#3f484c",
+                        "secondary-fixed-dim": "#3cddc7",
+                        "outline-variant": "#bec8cd",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#001f29",
+                        "outline": "#6f787d",
+                        "surface-container-low": "#eff4ff",
+                        "tertiary-fixed-dim": "#bfc8ce",
+                        "on-secondary-container": "#007165",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#ccdbf3",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed-variant": "#005047",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#141d21",
+                        "surface-container-high": "#dce9ff",
+                        "on-tertiary-container": "#e5eef4",
+                        "primary-fixed-dim": "#81d1f0",
+                        "surface-tint": "#006781",
+                        "on-primary-fixed-variant": "#004d62"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "24px",
+                        "xs": "4px",
+                        "gutter": "16px",
+                        "xl": "64px",
+                        "margin-mobile": "20px",
+                        "lg": "40px",
+                        "max-width": "1200px",
+                        "base": "8px",
+                        "sm": "12px",
+                        "margin-desktop": "auto"
+                    },
+                    "fontFamily": {
+                        "h1": ["Manrope"],
+                        "label-md": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "h3": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "h2": ["Manrope"],
+                        "button": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "h2": ["32px", {"lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "button": ["16px", {"lineHeight": "1", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen flex flex-col font-body-md antialiased">
+<!-- TopAppBar -->
+<header class="bg-white dark:bg-slate-900 font-manrope antialiased tracking-tight fixed top-0 w-full z-50 border-b border-slate-100 dark:border-slate-800 shadow-[0_4px_20px_-4px_rgba(14,116,144,0.08)]">
+<div class="flex justify-between items-center h-16 px-5 max-w-[1200px] mx-auto">
+<button aria-label="Back" class="text-cyan-700 dark:text-cyan-400 hover:text-cyan-600 dark:hover:text-cyan-300 transition-colors duration-200 active:scale-95 transform transition-transform duration-150 p-2 -ml-2 rounded-full hover:bg-surface-container-low">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_back</span>
+</button>
+<div class="text-2xl font-extrabold text-cyan-700 dark:text-cyan-400 tracking-tight">
+                RepairReach
+            </div>
+<button aria-label="Account" class="text-cyan-700 dark:text-cyan-400 hover:text-cyan-600 dark:hover:text-cyan-300 transition-colors duration-200 active:scale-95 transform transition-transform duration-150 p-2 -mr-2 rounded-full hover:bg-surface-container-low">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">account_circle</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-24 pb-12 px-margin-mobile md:px-lg max-w-max-width mx-margin-desktop w-full flex flex-col items-center justify-center">
+<div class="w-full max-w-md bg-surface-container-lowest rounded-xl shadow-sm p-6 md:p-8 flex flex-col items-center text-center">
+<h1 class="font-h2 text-h2 text-on-surface mb-sm">Rate Your Experience</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-xl">How was your repair service today?</p>
+<!-- Star Rating -->
+<div aria-label="Rating: 0 out of 5 stars" class="flex gap-4 justify-center mb-xl w-full" role="radiogroup">
+<!-- Stars rendered as large clickable icons for touch targets -->
+<button aria-checked="false" aria-label="Rate 1 star" class="p-2 rounded-full text-outline-variant hover:text-secondary-fixed-dim hover:bg-surface-container transition-colors focus:ring-2 focus:ring-primary focus:outline-none" role="radio">
+<span class="material-symbols-outlined text-[48px]" style="font-variation-settings: 'FILL' 0;">star</span>
+</button>
+<button aria-checked="false" aria-label="Rate 2 stars" class="p-2 rounded-full text-outline-variant hover:text-secondary-fixed-dim hover:bg-surface-container transition-colors focus:ring-2 focus:ring-primary focus:outline-none" role="radio">
+<span class="material-symbols-outlined text-[48px]" style="font-variation-settings: 'FILL' 0;">star</span>
+</button>
+<button aria-checked="false" aria-label="Rate 3 stars" class="p-2 rounded-full text-outline-variant hover:text-secondary-fixed-dim hover:bg-surface-container transition-colors focus:ring-2 focus:ring-primary focus:outline-none" role="radio">
+<span class="material-symbols-outlined text-[48px]" style="font-variation-settings: 'FILL' 0;">star</span>
+</button>
+<button aria-checked="false" aria-label="Rate 4 stars" class="p-2 rounded-full text-outline-variant hover:text-secondary-fixed-dim hover:bg-surface-container transition-colors focus:ring-2 focus:ring-primary focus:outline-none" role="radio">
+<span class="material-symbols-outlined text-[48px]" style="font-variation-settings: 'FILL' 0;">star</span>
+</button>
+<button aria-checked="false" aria-label="Rate 5 stars" class="p-2 rounded-full text-outline-variant hover:text-secondary-fixed-dim hover:bg-surface-container transition-colors focus:ring-2 focus:ring-primary focus:outline-none" role="radio">
+<span class="material-symbols-outlined text-[48px]" style="font-variation-settings: 'FILL' 0;">star</span>
+</button>
+</div>
+<!-- Optional Comment Area -->
+<div class="w-full mb-xl text-left">
+<label class="block font-label-md text-label-md text-on-surface mb-base" for="feedback-comment">Tell us more (optional)</label>
+<textarea class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg p-4 font-body-md text-body-md text-on-surface placeholder:text-outline focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none shadow-sm transition-shadow resize-none" id="feedback-comment" placeholder="What did we do well? What could we improve?" rows="4"></textarea>
+</div>
+<!-- Submit Button -->
+<button class="w-full h-[56px] bg-primary-container text-on-primary-container font-button text-button rounded-full hover:bg-primary transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:outline-none shadow-md hover:shadow-lg active:scale-[0.98] transform flex items-center justify-center gap-2">
+                Submit Feedback
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">send</span>
+</button>
+<button class="mt-4 w-full h-[56px] bg-transparent text-primary font-button text-button rounded-full hover:bg-surface-container-low transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:outline-none active:scale-[0.98] transform">
+                Skip
+            </button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 font-manrope text-sm w-full py-12 mt-auto border-t border-slate-200 dark:border-slate-800">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 px-5 max-w-[1200px] mx-auto text-center md:text-left">
+<div class="text-lg font-bold text-cyan-700 dark:text-cyan-400">
+                RepairReach
+            </div>
+<nav class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+<a class="text-slate-600 dark:text-slate-400 hover:underline decoration-2 underline-offset-4 transition-all focus:ring-2 focus:ring-cyan-500 outline-none" href="#">Services</a>
+<a class="text-slate-600 dark:text-slate-400 hover:underline decoration-2 underline-offset-4 transition-all focus:ring-2 focus:ring-cyan-500 outline-none" href="#">How it Works</a>
+<a class="text-slate-600 dark:text-slate-400 hover:underline decoration-2 underline-offset-4 transition-all focus:ring-2 focus:ring-cyan-500 outline-none" href="#">Privacy</a>
+<a class="text-slate-600 dark:text-slate-400 hover:underline decoration-2 underline-offset-4 transition-all focus:ring-2 focus:ring-cyan-500 outline-none" href="#">Support</a>
+</nav>
+<div class="text-slate-600 dark:text-slate-400">
+                © 2024 RepairReach. Reliable service at your doorstep.
+            </div>
+</div>
+</footer>
+</body></html>
